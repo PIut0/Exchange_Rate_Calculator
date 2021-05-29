@@ -47,6 +47,10 @@ body {
 	outline: none;
 	background-color: #eaeaea;
 }
+.main_container .input_box input::-webkit-inner-spin-button,
+.main_container .input_box input::-webkit-outer-spin-button{
+	display: none;
+}
 
 .main_container .input_box select{
 	width: 80px;
