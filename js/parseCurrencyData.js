@@ -1,4 +1,7 @@
 
+const apiKey = '2ebc5f37baf4b0b136ea1236';
+//const apiKey = '109d27894ba50e6511b9ec62';
+
 let dataSorting = (data) => {
 	data.sort((a, b) => {
 		if (a.code < b.code)
@@ -15,18 +18,18 @@ let getCurrencyData = async () => {
 		let data = await res.json();
 		let result = new Array;
 		data.forEach(ele => {
-			ele.currencies.forEach(cur => {
+			ele.currencies.forEach(async cur => {
 				let code = cur.code;
 				let symbol = cur.symbol;
 				if (!code || !symbol || code.length != 3)
-					return ;
+				return ;
 				for (let i = 0; i < result.length; i++) {
-					if (result[i].code == code)
+					if (result[i].code === code)
 						return ;
 				}
 				result.push({
-					"code": cur.code,
-					"symbol": cur.symbol
+					"code": code,
+					"symbol": symbol
 				});
 			})
 		});

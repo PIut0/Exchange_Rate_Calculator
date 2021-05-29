@@ -3,7 +3,6 @@ import { getCurrencyData } from "./parseCurrencyData.js";
 
 let addSelectBox = (currencyData, selectId, defaultCurrency) => {
 	let selectBox = document.querySelector(selectId);
-	console.log(selectBox);
 	for (let i = 0; i < currencyData.length; i++) {
 		let element = document.createElement("option");
 		let text = currencyData[i].code + " (" + currencyData[i].symbol + ")";
