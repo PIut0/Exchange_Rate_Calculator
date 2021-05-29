@@ -12,6 +12,7 @@ let calcValue = async () => {
 	let ratio = exchangeRatio[code];
 	let input = document.querySelector('.from_box input').value;
 	let value = input * ratio;
+	value = Math.round(value);
 	document.querySelector('.to_box input').value = value;
 }
 
