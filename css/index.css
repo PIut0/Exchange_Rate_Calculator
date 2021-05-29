@@ -35,7 +35,7 @@ body {
 .main_container .input_box {
 	padding: 5px;
 	margin: 5px;
-	border: 1px solid gray;
+	background-color: #eaeaea;
 	border-radius: 3px;
 }
 
@@ -45,6 +45,7 @@ body {
 	border: none;
 	text-align: right;
 	outline: none;
+	background-color: #eaeaea;
 }
 
 .main_container .input_box select{
@@ -52,4 +53,5 @@ body {
 	border: none;
 	outline: none;
 	text-align: right;
+	background-color: #eaeaea;
 }
