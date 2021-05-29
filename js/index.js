@@ -25,8 +25,10 @@ let initSelectData = async () => {
 window.onload = async () => {
 	await initSelectData();
 	let from_dom = document.querySelector('#from_country');
+	let to_dom = document.querySelector('#to_country');
 	let input_dom = document.querySelector('.from_box input');
 	await setRatio(from_dom);
-	input_dom.addEventListener('change', calcValue);
 	from_dom.addEventListener('change', setRatio);
+	input_dom.addEventListener('change', calcValue);
+	to_dom.addEventListener('change', calcValue);
 }
