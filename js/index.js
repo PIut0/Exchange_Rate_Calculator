@@ -28,6 +28,6 @@ window.onload = async () => {
 	let input_dom = document.querySelector('.from_box input');
 	await setRatio(from_dom);
 	from_dom.addEventListener('change', setRatio);
-	input_dom.addEventListener('change', calcValue);
+	input_dom.addEventListener('input', calcValue);
 	to_dom.addEventListener('change', calcValue);
 }
