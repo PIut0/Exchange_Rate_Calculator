@@ -1,6 +1,7 @@
 import { setRatio, calcValue } from "./get_exchange.js";
 import { getCurrencyData } from "./parseCurrencyData.js";
 
+// 국가들의 통화 정보를 바탕으로 dom에 select option 을 추가
 let addSelectBox = (currencyData, selectId, defaultCurrency) => {
 	let selectBox = document.querySelector(selectId);
 	for (let i = 0; i < currencyData.length; i++) {
@@ -15,6 +16,7 @@ let addSelectBox = (currencyData, selectId, defaultCurrency) => {
 	}
 }
 
+// 국가들의 통화 정보 받아온 후 select list 에 추가
 let initSelectData = async () => {
 	let currencyData = await getCurrencyData();
 	addSelectBox(currencyData, '#from_country', 'USD');

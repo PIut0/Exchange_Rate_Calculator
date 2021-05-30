@@ -1,8 +1,5 @@
 
-const apiKey = '2ebc5f37baf4b0b136ea1236';
-//const apiKey = '109d27894ba50e6511b9ec62';
-
-let dataSorting = (data) => {
+let dataSorting = (data) => {			// 데이터를 내림차순으로 정렬
 	data.sort((a, b) => {
 		if (a.code < b.code)
 			return -1;
@@ -12,7 +9,7 @@ let dataSorting = (data) => {
 	return (data);
 }
 
-let getCurrencyData = async () => {
+let getCurrencyData = async () => {		// 다양한 국가의 통화 정보를 파싱
 	let res = await fetch("https://restcountries.eu/rest/v2/all");
 	if (res.status === 200) {
 		let data = await res.json();
