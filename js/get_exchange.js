@@ -1,6 +1,6 @@
 
-const apiKey = '2ebc5f37baf4b0b136ea1236';
-//const apiKey = '109d27894ba50e6511b9ec62';
+//const apiKey = '2ebc5f37baf4b0b136ea1236';
+const apiKey = '109d27894ba50e6511b9ec62';
 
 let exchangeRatio;				// 기준통화를 기준으로 다른 통화들과의 환율 정보를 저장
 
